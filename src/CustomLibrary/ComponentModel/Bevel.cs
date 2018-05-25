@@ -6,7 +6,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
 
-namespace CustomLibrary.Forms
+namespace CustomLibrary.ComponentModel
 {
   public enum BevelStyle
   {

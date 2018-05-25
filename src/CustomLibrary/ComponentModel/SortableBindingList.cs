@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using Collections.Generic;
+using CustomLibrary.Collections.Generic;
 
-namespace ComponentModel
+namespace CustomLibrary.ComponentModel
 {
     public class SortableBindingList<T> : BindingList<T>
     {

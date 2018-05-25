@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Controles
+namespace CustomLibrary.ComponentModel
 {
     public class NumericTextBox : TextBox
     {

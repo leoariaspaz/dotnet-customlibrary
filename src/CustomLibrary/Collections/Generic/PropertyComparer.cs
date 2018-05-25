@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
 
-namespace Collections.Generic
+namespace CustomLibrary.Collections.Generic
 {
     public class PropertyComparer<T> : IComparer<T>
     {
