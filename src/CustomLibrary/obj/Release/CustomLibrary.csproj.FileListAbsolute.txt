@@ -1,5 +1,0 @@
-C:\Proyectos\lib\CustomLibrary\CustomLibrary\bin\Release\CustomLibrary.dll
-C:\Proyectos\lib\CustomLibrary\CustomLibrary\bin\Release\CustomLibrary.pdb
-C:\Proyectos\lib\CustomLibrary\CustomLibrary\obj\Release\CustomLibrary.dll
-C:\Proyectos\lib\CustomLibrary\CustomLibrary\obj\Release\CustomLibrary.pdb
-C:\Proyectos\lib\CustomLibrary\CustomLibrary\obj\Release\CustomLibrary.csprojResolveAssemblyReference.cache
