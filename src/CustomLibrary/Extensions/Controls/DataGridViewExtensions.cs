@@ -1,32 +1,48 @@
-﻿using CustomLibrary.ComponentModel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using CustomLibrary.Extensions.Collections;
 
 namespace CustomLibrary.Extensions.Controls
 {
     public static class DataGridViewExtensions
     {
-        public static SortableBindingList<T> ToSortableBindingList<T, T2>(this IEnumerable<T2> query, Func<T2, T> convert)
+        public static void SetDataSource<T>(this DataGridView grid, IEnumerable<T> query)
         {
-            SortableBindingList<T> list = new SortableBindingList<T>();
-            foreach (var item in query)
-            {
-                list.Add(convert(item));
-            }
-            return list;
+            grid.DataSource = query.ToSortableBindingList();
         }
 
-        public static SortableBindingList<T> ToSortableBindingList<T>(this IEnumerable<T> query)
+        public static void SetDataSource<T, T2>(this DataGridView grid, IEnumerable<T2> query, 
+            Func<T2, T> convert)
         {
-            SortableBindingList<T> rubros = new SortableBindingList<T>();
-            foreach (var item in query)
+            grid.DataSource = query.ToSortableBindingList(convert);
+        }
+
+        public static void SetRow(this DataGridView grid, Func<DataGridViewRow, bool> condición)
+        {
+            int rowIndex = -1;
+            foreach (DataGridViewRow row in grid.Rows)
             {
-                rubros.Add(item);
+                if (condición(row))
+                {
+                    rowIndex = row.Index;
+                    break;
+                }
             }
-            return rubros;
+            if (rowIndex >= 0)
+            {
+                for (int i = 0; i < grid.Columns.Count; i++)
+                {
+                    if (grid.Columns[i].Visible)
+                    {
+                        grid.CurrentCell = grid.Rows[rowIndex].Cells[i];
+                        return;
+                    }
+                }
+            }
         }
     }
 }
