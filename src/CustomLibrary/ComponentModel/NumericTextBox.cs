@@ -76,9 +76,6 @@ namespace CustomLibrary.ComponentModel
         {
             get
             {
-                //Int64 result = 0;
-                //Int64.TryParse(this.Text, out result);
-                //return result;
                 return Convert.ToInt64(DecValue);
             }
         }
