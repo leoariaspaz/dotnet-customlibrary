@@ -55,6 +55,7 @@
     </Compile>
     <Compile Include="Extensions\Collections\IEnumerableExtensions.cs" />
     <Compile Include="Extensions\Controls\DataGridViewExtensions.cs" />
+    <Compile Include="Extensions\Controls\ToolTipExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Collections\Generic\PropertyComparer.cs" />
   </ItemGroup>
