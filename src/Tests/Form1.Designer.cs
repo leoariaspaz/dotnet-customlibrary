@@ -31,7 +31,7 @@
             this.numericTextBox1 = new CustomLibrary.ComponentModel.NumericTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bevel1 = new CustomLibrary.ComponentModel.Bevel();
-            this.customDataGridView1 = new Controles.Grilla.CustomDataGridView();
+            this.customDataGridView1 = new CustomLibrary.ComponentModel.CustomDataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.customDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,7 +97,7 @@
         private CustomLibrary.ComponentModel.NumericTextBox numericTextBox1;
         private System.Windows.Forms.Label label1;
         private CustomLibrary.ComponentModel.Bevel bevel1;
-        private Controles.Grilla.CustomDataGridView customDataGridView1;
+        private CustomLibrary.ComponentModel.CustomDataGridView customDataGridView1;
     }
 }
 

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.ComponentModel;
 
-namespace Controles.Grilla
+namespace CustomLibrary.ComponentModel
 {
     public class CustomDataGridView : DataGridView
     {

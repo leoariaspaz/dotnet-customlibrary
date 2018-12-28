@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Finanzas.Lib.Extensions
+namespace CustomLibrary.Lib.Extensions
 {
     public static class ToolTipExtensions
     {
