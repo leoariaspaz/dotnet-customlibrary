@@ -19,6 +19,7 @@ namespace CustomLibrary.ComponentModel
             this.TextAlign = HorizontalAlignment.Right;
             _digits = 0;
             _decimalSeparator = Thread.CurrentThread.CurrentCulture.NumberFormat.NumberDecimalSeparator;
+            DecValue = 0;
         }
 
         [DefaultValue(0)]
@@ -32,6 +33,7 @@ namespace CustomLibrary.ComponentModel
             set
             {
                 _digits = (value >= 0) ? value : 0;
+                DecValue = DecValue;
             }
         }
 
@@ -51,13 +53,13 @@ namespace CustomLibrary.ComponentModel
                 }
                 else
                     if (this.Text.Contains(_decimalSeparator))
-                    {
-                        e.Handled = true;
-                    }
-                    else
-                    {
-                        e.KeyChar = _decimalSeparator.FirstOrDefault();
-                    }
+                {
+                    e.Handled = true;
+                }
+                else
+                {
+                    e.KeyChar = _decimalSeparator.FirstOrDefault();
+                }
             }
         }
 
@@ -74,6 +76,10 @@ namespace CustomLibrary.ComponentModel
 
         public Int64 IntValue
         {
+            set
+            {
+                DecValue = value;
+            }
             get
             {
                 return Convert.ToInt64(DecValue);
@@ -82,6 +88,11 @@ namespace CustomLibrary.ComponentModel
 
         public Decimal DecValue
         {
+            set
+            {
+                string format = "{0:n" + Digits + "}";
+                this.Text = String.Format(format, value);
+            }
             get
             {
                 Decimal result = 0;

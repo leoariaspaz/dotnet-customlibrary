@@ -28,20 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.numericTextBox1 = new CustomLibrary.ComponentModel.NumericTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.bevel1 = new CustomLibrary.ComponentModel.Bevel();
+            this.numericTextBox2 = new CustomLibrary.ComponentModel.NumericTextBox();
             this.customDataGridView1 = new CustomLibrary.ComponentModel.CustomDataGridView();
+            this.numericTextBox1 = new CustomLibrary.ComponentModel.NumericTextBox();
+            this.bevel1 = new CustomLibrary.ComponentModel.Bevel();
             ((System.ComponentModel.ISupportInitialize)(this.customDataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // numericTextBox1
-            // 
-            this.numericTextBox1.Location = new System.Drawing.Point(118, 19);
-            this.numericTextBox1.Name = "numericTextBox1";
-            this.numericTextBox1.Size = new System.Drawing.Size(100, 20);
-            this.numericTextBox1.TabIndex = 0;
-            this.numericTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label1
             // 
@@ -52,17 +45,21 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "NumericTextBox";
             // 
-            // bevel1
+            // numericTextBox2
             // 
-            this.bevel1.BevelStyle = CustomLibrary.ComponentModel.BevelStyle.Lowered;
-            this.bevel1.BevelType = CustomLibrary.ComponentModel.BevelType.Box;
-            this.bevel1.HighlightColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bevel1.Location = new System.Drawing.Point(12, 12);
-            this.bevel1.Name = "bevel1";
-            this.bevel1.ShadowColor = System.Drawing.SystemColors.ButtonShadow;
-            this.bevel1.Size = new System.Drawing.Size(221, 35);
-            this.bevel1.TabIndex = 2;
-            this.bevel1.Text = "bevel1";
+            this.numericTextBox2.DecValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            131072});
+            this.numericTextBox2.Digits = 2;
+            this.numericTextBox2.IntValue = ((long)(0));
+            this.numericTextBox2.Location = new System.Drawing.Point(251, 19);
+            this.numericTextBox2.Name = "numericTextBox2";
+            this.numericTextBox2.Size = new System.Drawing.Size(100, 20);
+            this.numericTextBox2.TabIndex = 4;
+            this.numericTextBox2.Text = "0,00";
+            this.numericTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // customDataGridView1
             // 
@@ -74,11 +71,39 @@
             this.customDataGridView1.Size = new System.Drawing.Size(477, 150);
             this.customDataGridView1.TabIndex = 3;
             // 
+            // numericTextBox1
+            // 
+            this.numericTextBox1.DecValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.numericTextBox1.IntValue = ((long)(0));
+            this.numericTextBox1.Location = new System.Drawing.Point(118, 19);
+            this.numericTextBox1.Name = "numericTextBox1";
+            this.numericTextBox1.Size = new System.Drawing.Size(100, 20);
+            this.numericTextBox1.TabIndex = 0;
+            this.numericTextBox1.Text = "0";
+            this.numericTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // bevel1
+            // 
+            this.bevel1.BevelStyle = CustomLibrary.ComponentModel.BevelStyle.Lowered;
+            this.bevel1.BevelType = CustomLibrary.ComponentModel.BevelType.Box;
+            this.bevel1.HighlightColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bevel1.Location = new System.Drawing.Point(12, 12);
+            this.bevel1.Name = "bevel1";
+            this.bevel1.ShadowColor = System.Drawing.SystemColors.ButtonShadow;
+            this.bevel1.Size = new System.Drawing.Size(389, 35);
+            this.bevel1.TabIndex = 2;
+            this.bevel1.Text = "bevel1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(501, 262);
+            this.Controls.Add(this.numericTextBox2);
             this.Controls.Add(this.customDataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.numericTextBox1);
@@ -98,6 +123,7 @@
         private System.Windows.Forms.Label label1;
         private CustomLibrary.ComponentModel.Bevel bevel1;
         private CustomLibrary.ComponentModel.CustomDataGridView customDataGridView1;
+        private CustomLibrary.ComponentModel.NumericTextBox numericTextBox2;
     }
 }
 
