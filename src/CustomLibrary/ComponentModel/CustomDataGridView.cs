@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using System.ComponentModel;
+using CustomLibrary.Extensions.Collections;
 
 namespace CustomLibrary.ComponentModel
 {
@@ -57,6 +58,24 @@ namespace CustomLibrary.ComponentModel
                 item = SortOrder.Ascending;
             }
             _sortDirections[e.ColumnIndex] = item;
+        }
+
+        public void SetRow(Func<DataGridViewRow, bool> condición)
+        {
+            if (Extensions.Controls.DataGridViewExtensions.SetRow(this, condición))
+            {
+                OnSelectionChanged(EventArgs.Empty);
+            }
+        }
+
+        public void SetDataSource<T>(IEnumerable<T> query)
+        {
+            DataSource = query.ToSortableBindingList();
+        }
+
+        public void SetDataSource<T, T2>(IEnumerable<T2> query, Func<T2, T> convert)
+        {
+            DataSource = query.ToSortableBindingList(convert);
         }
     }
 }

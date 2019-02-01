@@ -21,7 +21,7 @@ namespace CustomLibrary.Extensions.Controls
             grid.DataSource = query.ToSortableBindingList(convert);
         }
 
-        public static void SetRow(this DataGridView grid, Func<DataGridViewRow, bool> condición)
+        public static bool SetRow(this DataGridView grid, Func<DataGridViewRow, bool> condición)
         {
             int rowIndex = -1;
             foreach (DataGridViewRow row in grid.Rows)
@@ -39,10 +39,11 @@ namespace CustomLibrary.Extensions.Controls
                     if (grid.Columns[i].Visible)
                     {
                         grid.CurrentCell = grid.Rows[rowIndex].Cells[i];
-                        return;
+                        return true;
                     }
-                }
+                }                
             }
+            return false;
         }
     }
 }
