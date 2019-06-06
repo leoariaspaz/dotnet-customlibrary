@@ -23,45 +23,51 @@ namespace Tests
                 ID = 1,
                 Descripción = "Lorem ipsum dolor sit amet",
                 Fecha = RandomDay(),
-                Importe = RandomImporte()
+                Importe = RandomImporte(),
+                Válido = true
             });
             datos.Add(new Datos
             {
                 ID = 2,
                 Descripción = "Consectetuer adipiscing elit",
                 Fecha = RandomDay(),
-                Importe = RandomImporte()
+                Importe = RandomImporte(),
+                Válido = true
             });
             datos.Add(new Datos
             {
                 ID = 3,
                 Descripción = "Maecenas porttitor congue massa",
                 Fecha = RandomDay(),
-                Importe = RandomImporte()
+                Importe = RandomImporte(),
+                Válido = true
             });
             datos.Add(new Datos
             {
                 ID = 4,
                 Descripción = "Fusce posuere",
                 Fecha = RandomDay(),
-                Importe = RandomImporte()
+                Importe = RandomImporte(),
+                Válido = true
             });
             datos.Add(new Datos
             {
                 ID = 5,
                 Descripción = "Magna sed pulvinar ultricies",
                 Fecha = RandomDay(),
-                Importe = RandomImporte()
+                Importe = RandomImporte(),
+                Válido = true
             });
             datos.Add(new Datos
             {
                 ID = 6,
                 Descripción = "Purus lectus malesuada libero",
                 Fecha = RandomDay(),
-                Importe = RandomImporte()
+                Importe = RandomImporte(),
+                Válido = false
             });
 
-            customDataGridView1.DataSource = datos.ToSortableBindingList();
+            customDataGridView1.SetDataSource(datos, 0, ListSortDirection.Ascending);
         }
 
         private Random gen = new Random();

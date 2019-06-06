@@ -15,5 +15,7 @@ namespace Tests
         public DateTime Fecha { get; set; }
 
         public decimal Importe { get; set; }
+
+        public bool Válido { get; set; }
     }
 }
